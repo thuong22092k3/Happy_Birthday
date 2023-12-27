@@ -1,0 +1,31 @@
+@mixin flex($align-item, $justify-content, $row: false) {
+  display: flex;
+  align-items: $align-item;
+  justify-content: $justify-content;
+
+  @if $row {
+    flex-direction: row;
+  }
+
+  @else {
+    flex-direction: column;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin tab-port {
+  @media screen and (max-width: $tab-port-width) {
+    @content;
+  }
+}
+
+@mixin tab-land {
+  @media screen and (max-width: $tab-land-width) {
+    @content;
+  }
+}
