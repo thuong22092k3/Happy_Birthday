@@ -12,7 +12,7 @@ import {
   img7,
   img8,
   img9,
-  
+  img10,
 } from "../../assets/images";
 
 const sliderSettings = {
@@ -53,6 +53,9 @@ const slides = [
   {
     imgSrc: img9,
   },
+  {
+    imgSrc: img10,
+  },
 ];
 
 const MainComponent = () => {
@@ -90,16 +93,17 @@ const MainComponent = () => {
   }, []);
 
   const contentLines = [
-    "ELSA » Học tiếng Anh giao tiếp » 100+ Mẫu câu tiếng Anh giao tiếp thông dụng hàng ngày",
-    "ELSA » Học tiếng Anh giao tiếp » 100+ Mẫu câu tiếng Anh giao tiếp thông dụng hàng ngày",
-    "ELSA » Học tiếng Anh giao tiếp » 100+ Mẫu câu tiếng Anh giao tiếp thông dụng hàng ngày",
-    "ELSA » Học tiếng Anh giao tiếp » 100+ Mẫu câu tiếng Anh giao tiếp thông dụng hàng ngày",
-    "ELSA » Học tiếng Anh giao tiếp » 100+ Mẫu câu tiếng Anh giao tiếp thông dụng hàng ngày",
-    "ELSA » Học tiếng Anh giao tiếp » 100+ Mẫu câu tiếng Anh giao tiếp thông dụng hàng ngày",
-    "ELSA » Học tiếng Anh giao tiếp » 100+ Mẫu câu tiếng Anh giao tiếp thông dụng hàng ngày",
-    "ELSA » Học tiếng Anh giao tiếp » 100+ Mẫu câu tiếng Anh giao tiếp thông dụng hàng ngày",
-    "ELSA » Học tiếng Anh giao tiếp » 100+ Mẫu câu tiếng Anh giao tiếp thông dụng hàng ngày",
-    "ELSA » Học tiếng Anh giao tiếp » 100+ Mẫu câu tiếng Anh giao tiếp thông dụng hàng ngày",
+    "Chúc mừng sinh nhật tuổi 18 lần thứ 3 cô bé của tôi <3 <3 <3",
+    "Nếu như có một ngày mày thật sự bế tắc và mọi cánh cửa dường như đã khép lại thì hãy yên tâm rằng luôn có một người sẵn lòng san sẻ với mày, đó là tao.",
+    "Cảm ơn mày vì đã làm bạn với tao (P/s: Không có mất não :)))",
+    "Chúc mày sinh nhật vui vẻ, tuổi mới xinh lại thêm xinh, duyên lại càng thêm duyên và yêu đời nhé!",
+    "Chúc mày có những phút giây thật vui vẻ, hạnh phúc bên người thân, bạn bè. Hy vọng mày sẽ thành công, hạnh phúc trong cả công việc lẫn cuộc sống.",
+    "Tuy hai đứa ở xa nhau nhưng trong tương lai t sẽ cố gắng đi chơi và dành thời gian với m nhiều hơn. Iuuu bé <3",
+    "Ever since we were little, you’ve always been there for me. I’m so glad we’re still friends, and I bet that, one day, we’ll be sitting side-by-side in our rocking chairs at the nursing home laughing at all of our crazy times together.",
+    "Mãi là bạn thân của t nhé!!!",
+    " 私にとって、君が大切な人だよって言いたくて。君のお誕生日を心からお祝いします。",
+    "转眼间一年又过去，今天又是你的生日了，愿今天你拥有世上一切美丽的东西，来年生日更美好，更快乐！一年胜一年青春！生日快乐!",
+    "Chúc mừng sinh nhật nhé bạn của tôi!",
   ];
 
   const [visibleLines, setVisibleLines] = useState(0);
@@ -108,7 +112,7 @@ const MainComponent = () => {
     if (contentVisible) {
       const lineInterval = setInterval(() => {
         setVisibleLines((prevLines) => prevLines + 1);
-      }, 1500);
+      }, 2000);
 
       return () => {
         clearInterval(lineInterval);
@@ -118,7 +122,7 @@ const MainComponent = () => {
 
   return (
     <div className="mainComponent">
-      {helloVisible && <div className="mainComponent__hello">Hello Bé!</div>}
+      {helloVisible && <div className="mainComponent__hello ${}">Hello Bé!</div>}
       <div className="mainComponent__countDown">
         {countdownVisible && countdown > 0 && (
           <p className="mainComponent__countDown__p">{countdown}</p>
